@@ -16,7 +16,7 @@
 }
 ```
 
-2. 由于飞书的活动未导出，所以需要`shizuku`的支持。你先需要[ 配置shizhuku ](https://shizuku.rikka.app/zh-hans/)。
+2. 由于飞书的活动未导出，所以需要`shizuku`的支持。你需要先[ 配置shizhuku ](https://shizuku.rikka.app/zh-hans/)。
 
 > ~~当然，可以手动用无障碍模拟，只是我不是很想做~~
 
@@ -28,7 +28,7 @@
 
 1. `input`
 
-此脚本用于自动在每日签到的话题群的话题下发送特定信息，在``里面定义你要发的话题id和内容。
+此脚本用于自动在每日签到的话题群的话题下发送特定信息，在`config.json`里面定义你要发的话题id和内容。
 
 话题id可以用飞书api获取，或者用软件抓取（这里用的XposedEdge）。
 
