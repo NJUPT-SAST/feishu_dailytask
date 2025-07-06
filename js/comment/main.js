@@ -37,9 +37,13 @@ console.log("文本输入完成，准备发送...");
 var send_button = id("right_insets").findOne();
 click(send_button.bounds().centerX(), send_button.bounds().centerY());
 
-sleep(1000); // 等待发送完成
-let packageName = currentPackage();
-// 切换回去
-sleep(1500);
+
+// 善后工作
+sleep(1000);
+back();
+sleep(1000);
+back();
+sleep(1000);
 home();
 // shizuku("am force-stop " + packageName, true);
+shizuku(`input keyevent 26`);

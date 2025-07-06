@@ -21,14 +21,17 @@ shizuku('su -c \'am start -n com.ss.android.lark/.threadwindow.ThreadWindowActiv
 
 // 开始操作
 scrollToBottomWithSwipe("com.ss.android.lark:id/message_view", 14);
-sleep(999); // 等待列表加载完成
+sleep(1000); // 等待列表加载完成
 smartClickCheckinButton();
 
-// 切换回去
-sleep(1499);
+// 善后动作
+sleep(1500);
+back();
+sleep(1000);
 home();
-// shizuku("am force-stop " + packageName, true)
-
+sleep(1000);
+// shizuku("am force-stop " + packageName, true);
+shizuku(`input keyevent 26`);
 
 /**
  * 最终完美版 - V7

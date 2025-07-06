@@ -1,9 +1,7 @@
 function swipeUp() {
     // 1. 检查屏幕是否关闭，如果是则唤醒
-    if (!device.isScreenOn()) {
-        device.wakeUp(); // 唤醒屏幕
-        sleep(500);     // 等待屏幕亮起
-    }
+    device.wakeUpIfNeeded();
+    sleep(800);     // 等待屏幕亮起
 
     // 获取屏幕尺寸
     let width = device.width;
@@ -15,7 +13,7 @@ function swipeUp() {
         height * 0.8,             // 起始Y坐标（底部80%位置）
         width / 2,                // 结束X坐标（保持X不变，垂直滑动）
         height * 0.2,             // 结束Y坐标（顶部20%位置）
-        200                       // 滑动耗时（毫秒）
+        150                       // 滑动耗时（毫秒）
     );
     console.log("上滑完成");
 }
